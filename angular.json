@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "to-do-list-angular"
+    }
+  },
+  "defaultProject": "to-do-list-angular",
+  "cli": {
+    "analytics": false
+  }
 }
