@@ -1,0 +1,29 @@
+html {
+  width: 450px;
+}
+textarea {
+  -webkit-box-shadow: 8px 8px 19px 0 rgba(222, 222, 216,1) inset, -8px -8px 19px 0 rgba(255,255,255,1) inset;
+  box-shadow: 8px 8px 19px 0 rgba(222, 222, 216,1) inset, -8px -8px 19px 0 rgba(255,255,255,1) inset;
+  background: #EFEFEA;
+  border: none;
+  border-radius: 50px;
+  resize:none;
+  outline: none;
+  &:focus {
+    border: none;
+    box-shadow: 8px 8px 19px 0 rgba(222, 222, 216,1) inset, -8px -8px 19px 0 rgba(255,255,255,1) inset;
+    background: #EFEFEA;
+  }
+}
+button {
+  background: -webkit-linear-gradient(0deg, #ff9E31 0, #fe6d1a 100%);
+  background: -moz-linear-gradient(90deg, #ff9E31 0, #fe6d1a 100%);
+  background: linear-gradient(90deg, #ff9E31 0, #fe6d1a 100%);
+  -webkit-box-shadow: -8px -8px 8px 0 rgba(255,255,255,1) , 8px 8px 8px 0 rgba(222, 222, 216, 1);
+  box-shadow: -8px -8px 8px 0 rgba(255,255,255,1) , 8px 8px 8px 0 rgba(222, 222, 216, 1);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #ffffff
+}
+

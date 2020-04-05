@@ -1,18 +1,15 @@
 <div class="container">
-  <h1 class="h1 text-center">To do list</h1>
+    <p class="h3 font-weight-bold my-5">Create task</p>
+  <textarea rows="5" placeholder="What need to do ..." class="form-control p-4" [(ngModel)]="itemDscr" ></textarea>
+  <button class="d-block py-2 px-5 my-5" (click)="addItem()">Save</button>
 
-  <p class="h3 font-weight-bold my-3 text-center">Create task</p>
-
-  <textarea placeholder="What need to do ..." class="form-control" [(ngModel)]="itemDscr" ></textarea>
-  <button class="d-block btn btn-outline-primary my-3 mx-auto" (click)="addItem()">Add task</button>
-
-  <h2 class="font-weight-bold my-3 text-center">Upcoming Tasks</h2>
-  <div class="list-group list-group-flush">
+  <h2 class="font-weight-bold my-5">Upcoming tasks</h2>
+  <div class="">
     <app-to-do-item *ngFor="let item of items; let i = index"
                     [taskItem] = "item"
                     [idx] = "i"
                     (onDelete) ="deleteItem($event)"
-                    class="list-group-item">
+                    class="d-block">
     </app-to-do-item>
   </div>
 </div>

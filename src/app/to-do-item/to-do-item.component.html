@@ -1,4 +1,5 @@
-<p>
-  <span  class="d-inline-block ml-2"><b>{{ idx + 1 }}</b> {{ taskItem['itemDscr'] }}</span>
-  <span class="close m-2" (click)="delete()">&times;</span>
+<p class="d-inline-flex justify-content-start w-100">
+  <span class="close pr-3" (click)="delete()">&times;</span>
+  <span><b>{{ idx + 1 }}</b></span>
+  <span  class="d-inline-block ml-2">{{ taskItem['itemDscr'] }}</span>
 </p>
