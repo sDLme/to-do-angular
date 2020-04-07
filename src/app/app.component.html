@@ -1,15 +1,3 @@
 <div class="container">
-    <p class="h3 font-weight-bold my-5">Create task</p>
-  <textarea rows="5" placeholder="What need to do ..." class="form-control p-4" [(ngModel)]="itemDscr" ></textarea>
-  <button class="d-block py-2 px-5 my-5" (click)="addItem()">Save</button>
-
-  <h2 class="font-weight-bold my-5">Upcoming tasks</h2>
-  <div class="">
-    <app-to-do-item *ngFor="let item of items; let i = index"
-                    [taskItem] = "item"
-                    [idx] = "i"
-                    (onDelete) ="deleteItem($event)"
-                    class="d-block">
-    </app-to-do-item>
-  </div>
+  <router-outlet ></router-outlet>
 </div>

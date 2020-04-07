@@ -9,7 +9,7 @@ import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angula
 export class ToDoItemComponent {
 
   @Input() idx: number;
-  @Input() taskItem: [];
+  @Input() taskItem: object;
   @Output('onDelete') del: EventEmitter<any> = new EventEmitter<any>();
   delete() {
     this.del.emit(this.idx);

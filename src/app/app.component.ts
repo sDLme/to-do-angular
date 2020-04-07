@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {StoreService} from './store.service';
 
 @Component({
   selector: 'app-root',
@@ -6,29 +7,9 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class AppComponent implements  OnInit{
-
-  itemDscr = '';
-  items = [];
-  itemObj = {};
+export class AppComponent implements  OnInit {
+  service: StoreService;
   ngOnInit() {
-    this.items = localStorage.getItem('my-app-to-do') ? JSON.parse(localStorage.getItem('my-app-to-do')) : [];
-    localStorage.setItem('my-app-to-do', JSON.stringify(this.items));
-  }
-  addItem() {
-    if (this.itemDscr) {
-      this.itemObj = {
-        itemDscr: this.itemDscr
-      };
-      this.items.push(this.itemObj);
-      localStorage.setItem('my-app-to-do', JSON.stringify(this.items));
-      this.items = JSON.parse(localStorage.getItem('my-app-to-do'));
-      this.itemDscr = '';
-    }
-  }
-
-  deleteItem(index) {
-    this.items.splice(index, 1);
-    localStorage.setItem('my-app-to-do', JSON.stringify(this.items));
+    this.service = new StoreService();
   }
 }

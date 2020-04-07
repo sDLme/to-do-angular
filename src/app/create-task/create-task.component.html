@@ -1,0 +1,8 @@
+<h1 class="h3 font-weight-bold my-5">Create task</h1>
+<textarea rows="5" placeholder="What need to do ..." class="form-control p-4" [(ngModel)]="itemDscr" ></textarea>
+
+<div class="d-flex justify-content-center align-items-center my-5">
+  <a routerLink="/" routerLinkActive="active" title="List of tasks" class="main-btn main-btn_close mr-3 p-2"><mat-icon>list</mat-icon></a>
+  <button class="d-block py-2 px-5 main-btn main-btn_color" (click)="addItem()">Save</button>
+</div>
+
