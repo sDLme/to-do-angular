@@ -1,8 +1,12 @@
 <h1 class="h3 font-weight-bold my-5">Upcoming tasks</h1>
-<app-to-do-item *ngFor="let item of items; let i = index"
-                 [taskItem] = "item"
-                 [idx] = "i"
-                 (onDelete) ="deleteItem($event)"
-                 class="d-block">
-</app-to-do-item>
+<div *ngIf="items.length !== 0 ; else elseBlock ">
+  <app-to-do-item *ngFor="let item of items; let i = index"
+                  [taskItem] = "item"
+                  [idx] = "i"
+                  (onDelete) ="deleteItem($event)"
+                  class="d-block">
+  </app-to-do-item>
+</div>
+<ng-template #elseBlock>No new tasks </ng-template>
+
 <a routerLink="/create" routerLinkActive="active" title="Add new task" class="d-inline-block mx-auto py-2  px-3 main-btn main-btn_color">+</a>

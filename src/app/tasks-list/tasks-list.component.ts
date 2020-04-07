@@ -6,7 +6,7 @@ import {StoreService} from '../store.service';
   templateUrl: './tasks-list.component.html',
   styleUrls: ['./tasks-list.component.scss']
 })
-export class TasksListComponent implements OnInit {
+export class TasksListComponent {
 
   items = [];
   storeService: StoreService;
@@ -14,10 +14,6 @@ export class TasksListComponent implements OnInit {
   constructor( ) {
     this.storeService = StoreService.getInstance();
     this.items = this.storeService.getItems();
-  }
-
-  ngOnInit(): void {
-    console.log(this.items);
   }
 
   deleteItem(index) {
