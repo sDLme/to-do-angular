@@ -30,6 +30,7 @@ $to-do-list-angular-theme: mat-light-theme($to-do-list-angular-primary, $to-do-l
 html {
   width: 450px;
   height: 100%;
+  min-height: 500px;
 }
 body {
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
